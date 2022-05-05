@@ -26,5 +26,5 @@ logs:
 	@docker-compose -f ./srcs/docker-compose.yml logs -f -t --tail="all"
 
 volumes:
-	@mkdir -p ~/data/db-data
-	@mkdir -p ~/data/wp-data
+	@mkdir -p /home/maike/data/db-data
+	@mkdir -p /home/maike/data/wp-data

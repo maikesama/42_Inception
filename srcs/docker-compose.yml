@@ -50,11 +50,11 @@ volumes:
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: '~/data/db_data'
+      device: '/home/maike/data/db_data'
 
   wp_data:
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: '~/data/wp_data'
+      device: '/home/maike/data/wp_data'
 
