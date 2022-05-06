@@ -7,7 +7,7 @@ services:
     env_file:
       - .env
     volumes:
-      - db_data:/var/lib/mysql
+      - ~/data/db_data:/var/lib/mysql
     networks:
       - wpsite
     restart: always
@@ -20,7 +20,7 @@ services:
     env_file:
       - .env
     volumes:
-      - wp_data:/var/www/html/wordpress
+      - ~/data/wp_data:/var/www/html/wordpress
     networks:
       - wpsite
     restart: always
@@ -33,7 +33,7 @@ services:
     env_file:
       - .env
     volumes:
-      - wp_data:/var/www/html/wordpress
+      - ~/data/wp_data:/var/www/html/wordpress
     networks:
       - wpsite
     ports:
@@ -44,17 +44,17 @@ services:
 networks:
   wpsite:
 
-volumes:
+# volumes:
 
-  db_data:
-    driver_opts:
-      type: 'none'
-      o: 'bind'
-      device: '/home/maike/data/db_data'
+#   db_data:
+#     driver_opts:
+#       type: 'none'
+#       o: 'bind'
+#       device: '/Users/michele/data/db-data'
 
-  wp_data:
-    driver_opts:
-      type: 'none'
-      o: 'bind'
-      device: '/home/maike/data/wp_data'
+#   wp_data:
+#     driver_opts:
+#       type: 'none'
+#       o: 'bind'
+#       device: '/Users/michele/data/wp-data'
 
